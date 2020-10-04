@@ -5,7 +5,7 @@ import {
   Route,
 } from 'react-router-dom'
 
-const Home = () => <div>Home</div>
+import Home from 'pages/Home'
 
 const App = () => (
   <Router>

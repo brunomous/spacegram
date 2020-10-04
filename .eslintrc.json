@@ -6,7 +6,9 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "airbnb"
+    "airbnb",
+    "plugin:import/errors",
+    "plugin:import/warnings"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -20,7 +22,8 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react",
+    "import"
   ],
   "rules": {
     "semi": [
@@ -55,5 +58,15 @@
     "no-plusplus": "error",
     "prefer-template": "error",
     "react/jsx-props-no-spreading": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": [
+          "node_modules",
+          "src/"
+        ]
+      }
+    }
   }
 }
